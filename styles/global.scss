@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+html,
+body,
+button {
+  font-family: "Merriweather", sans-serif;
+  background: linear-gradient(245.2deg, #2e2e2e 0.6%, #242424 99.51%);
+  color: white;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 1150) {
+  html,
+  body,
+  button {
+    font-size: 16px;
+  }
+}

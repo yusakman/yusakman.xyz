@@ -55,17 +55,11 @@
           font-weight: 500;
           margin-top: 30px;
         }
-
-        // .postTitle:hover {
-        //   text-decoration: underline;
-        // }
       }
     }
 
     .link-container:hover {
       color: rgb(218, 218, 218);
-      // text-decoration: underline;
-      // text-decoration-thickness: 0.5px;
     }
   }
 
@@ -88,10 +82,9 @@
         .textContainer {
           width: 90%;
 
-          .postTitle,
-          .desc,
-          .dates {
+          .desc {
             text-align: justify;
+            font-size: 90%;
           }
         }
       }

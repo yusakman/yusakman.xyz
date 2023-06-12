@@ -16,7 +16,9 @@
         "_type": "reference"
       }
     },
-    "_id": "3af3782e-63d2-40e1-9768-7e36a7ee8e68"
+    "_id": "3af3782e-63d2-40e1-9768-7e36a7ee8e68",
+    "webUrl": "https://www.tenggara.dev/",
+    "githubUrl": "https://github.com/tenggaradev"
   },
   {
     "publishedDate": "2022-11-01",
@@ -35,6 +37,8 @@
         "_type": "reference"
       }
     },
-    "_id": "1e9a2e7d-dbc4-440d-9e76-d909225d87b1"
+    "_id": "1e9a2e7d-dbc4-440d-9e76-d909225d87b1",
+    "webUrl": "https://sweet-meadow-5072.on.fleek.co/",
+    "githubUrl": "https://github.com/yusakman/sample-order-book-dex"
   }
 ]

@@ -3,49 +3,49 @@ import img from "../../assets/project1.svg";
 import styles from "./Projects.module.scss";
 import iconGlobe from "../../assets/GlobeSimple.svg";
 import iconGit from "../../assets/GithubLogo.svg";
-import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
-import { IconContext } from "react-icons";
+import Link from "next/link";
+import { IS_DEV } from "@/const";
+import { urlFor } from "@/lib/client";
 
-const Projects = () => {
+const Projects = ({ image, title, description, slug, webUrl, githubUrl }) => {
   return (
     <div className={styles.projects}>
-      <h1 className={styles.title}>Projects</h1>
       <div className={styles.card}>
-        <div className={styles.cardImage}>
-          <IconContext.Provider value={{ className: styles.arrow }}>
-            <AiFillCaretLeft className={styles.arrow} />
-          </IconContext.Provider>
+        <Link
+          href={`/project/${encodeURI(slug.current)}`}
+          className={styles.top}
+        >
           <div className={styles.imgContainer}>
             <Image
-              src={img}
-              alt="project-1"
+              src={IS_DEV ? img : urlFor(image).url()}
+              alt={image.caption}
               fill
-              // sizes="100vw"
+              sizes="100vw"
               style={{
                 objectFit: "cover",
               }}
             />
           </div>
-          <IconContext.Provider value={{ className: styles.arrow }}>
-            <AiFillCaretRight />
-          </IconContext.Provider>
-        </div>
-
-        <div className={styles.projectName}>
-          <p>Knight Finace</p>
-          <Image src={iconGlobe} alt="icon-globe" />
-          <Image src={iconGit} alt="icon-git" />
-        </div>
-        <div className={styles.projectDesc}>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a Read More.
-          </p>
+        </Link>
+        <div className={styles.bottom}>
+          <div className={styles[`project-title`]}>
+            <Link href={`/project/${encodeURI(slug.current)}`}>
+              <p>{title}</p>
+            </Link>
+            <Link href={webUrl} target="_blank" className={styles.iconUrl}>
+              <Image src={iconGlobe} alt="icon-globe" />
+            </Link>
+            <Link href={githubUrl} target="_blank" className={styles.iconUrl}>
+              <Image src={iconGit} alt="icon-git" />
+            </Link>
+          </div>
+          <div className={styles[`project-desc`]}>
+            <Link href={`/project/${encodeURI(slug.current)}`}>
+              <p>{description}</p>
+            </Link>
+          </div>
         </div>
       </div>
-      <p className={styles.more}>More Projects...</p>
     </div>
   );
 };

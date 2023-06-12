@@ -83,5 +83,19 @@ export default {
       title: 'Body Content',
       of: [{type: 'block'}, {type: 'image'}],
     },
+    {
+      group: 'content',
+      name: 'webUrl',
+      title: 'Website Url',
+      type: 'url',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      group: 'content',
+      name: 'githubUrl',
+      title: 'Github Url',
+      type: 'url',
+      validation: (Rule) => Rule.required(),
+    }
   ],
 }

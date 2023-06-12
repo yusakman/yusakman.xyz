@@ -10,6 +10,7 @@ import styles from "@/styles/Home.module.scss";
 import Hero from "@/components/Hero";
 import Portofolio from "@/components/Portofolio";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 const LOAD_MORE_STEP = 2;
 
@@ -42,8 +43,11 @@ export default function Home({
           ))}
         </FeaturedPost>
         <Portofolio>
-          <Projects></Projects>
+          {projects.map((project) => (
+            <Projects key={project._id} {...project}></Projects>
+          ))}
         </Portofolio>
+        <Footer />
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 import styles from "./FeaturedPost.module.scss";
 import Image from "next/image";
-import samplePost1 from "../../assets/samplepost1.svg";
-import samplePost2 from "../../assets/samplepost2.svg";
 import { GiSecretBook } from "react-icons/gi";
 import { IconContext } from "react-icons";
 

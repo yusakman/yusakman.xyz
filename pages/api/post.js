@@ -50,7 +50,7 @@ export async function loadProject(start, end) {
     console.log("fetching data PROJECT...");
     const query = `{
       "projects": *[_type == "project"] | order(publishedDate desc) [${start}...${end}] 
-      {_id, publishedDate, title, slug, description, image},
+      {_id, publishedDate, title, slug, description, image, webUrl, githubUrl},
       "totalProject": count(*[_type == "project"])
      }`;
 

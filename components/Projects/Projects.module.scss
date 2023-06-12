@@ -1,122 +1,98 @@
 .projects {
-  width: 100%;
+  margin: 10px auto;
 
-  .title {
-    font-size: 35px;
-    text-align: center;
-    margin: 20px;
-  }
   .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    margin: 30px 0;
 
-    .cardImage {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin: 0 auto;
+    a {
+      list-style: none;
+      color: inherit;
+    }
 
-      .arrow {
-        height: 35px;
-        width: 35px;
-        margin: 0 20px;
+    .top {
+      position: relative;
+      margin: 15px 0;
 
-        @media only screen and (max-width: 950px) {
+      .imgContainer {
+        width: 800px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+    }
+
+    .bottom {
+      width: 800px;
+      margin: 15px 0;
+
+      .project-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 15px 0;
+
+        a {
+          p {
+            font-size: 150%;
+            margin: 0 10px 0 0;
+          }
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        .iconUrl {
           margin: 0 5px;
         }
       }
 
-      .arrow:hover {
-        cursor: pointer;
-        color: #d9d9d9;
-      }
-    }
-
-    .imgContainer {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      background-color: rgb(220, 238, 245);
-    }
-
-    .projectName {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 30px;
-
-      p {
-        font-size: 200%;
-        margin: 0 10px;
-      }
-
-      p:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-
-      img {
-        margin: 0 5px;
-      }
-
-      img:hover {
-        cursor: pointer;
-      }
-    }
-
-    .projectDesc {
-      width: 600px;
-      display: flex;
-      align-items: center;
-      text-align: justify;
-      line-height: 130%;
-    }
-  }
-
-  .more {
-    margin: 30px 0;
-    font-size: 150%;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 862px) {
-  .projects {
-    .card {
-      .cardImage {
-        .imgContainer {
-          width: 450px;
-          height: 250px;
-        }
-      }
-
-      .projectDesc {
-        width: 500px;
+      .project-desc {
+        font-size: 100%;
       }
     }
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1150px) {
   .projects {
     .card {
-      .cardImage {
-        .arrow {
-          display: none;
-        }
+      .top {
+        width: 100%;
+      }
 
+      .bottom {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .projects {
+    .card {
+      .top {
         .imgContainer {
-          width: 415px;
+          width: 500px;
           height: 250px;
         }
       }
+    }
+  }
+}
 
-      .projectDesc {
-        width: 400px;
+@media only screen and (max-width: 768px) {
+  .projects {
+    .card {
+      .top {
+        .imgContainer {
+          width: 90%;
+          height: 250px;
+        }
       }
     }
   }
@@ -125,15 +101,16 @@
 @media only screen and (max-width: 612px) {
   .projects {
     .card {
-      .cardImage {
+      .top {
         .imgContainer {
-          width: 400px;
-          height: 235px;
+          height: 200px;
         }
       }
 
-      .projectDesc {
-        width: 400px;
+      .bottom {
+        .project-title {
+          font-size: 90%;
+        }
       }
     }
   }
@@ -142,22 +119,43 @@
 @media only screen and (max-width: 500px) {
   .projects {
     .card {
-      .cardImage {
+      .top {
+        width: 90%;
+        height: 180px;
+      }
+
+      .bottom {
+        width: 90%;
+        .project-title {
+          font-size: 80%;
+        }
+
+        .project-desc {
+          font-size: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .projects {
+    .card {
+      .top {
         .imgContainer {
-          width: 300px;
-          height: 200px;
-          justify-content: center;
+          width: 80%;
+          height: 150px;
         }
       }
 
-      .projectName {
-        p {
-          font-size: 120%;
+      .bottom {
+        .project-title {
+          font-size: 70%;
         }
-      }
 
-      .projectDesc {
-        width: 300px;
+        .project-desc {
+          font-size: 80%;
+        }
       }
     }
   }

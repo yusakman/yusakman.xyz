@@ -1,8 +1,8 @@
 // schemas/pet.js
 export default {
-  name: 'post',
+  name: 'project',
   type: 'document',
-  title: 'Post',
+  title: 'Project',
   groups: [
     {
       name: 'content',

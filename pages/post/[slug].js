@@ -1,18 +1,18 @@
 import Image from "next/image";
 import { client, urlFor } from "@/lib/client";
+import styles from "@/styles/Home.module.scss";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Article from "@/components/Article";
 
 const Post = ({ post }) => {
-  console.log("Post", post);
   return (
-    <div className="blog-post">
-      <Image
-        src={urlFor(post.image).url()}
-        alt={post.image.caption}
-        width={300}
-        height={100}
-      />
-      <p>{post.title}</p>
-      <p>{post.description}</p>
+    <div className={styles.dark}>
+      <div className={styles.home}>
+        <Header />
+        <Article {...post} />
+        <Footer />
+      </div>
     </div>
   );
 };

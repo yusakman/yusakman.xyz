@@ -81,7 +81,16 @@ export default {
       name: 'body',
       type: 'array',
       title: 'Body Content',
-      of: [{type: 'block'}, {type: 'image'}],
+      of: [
+        {type: 'block'},
+        {
+          type: 'image',
+          fields: [
+            {name: 'caption', type: 'string', title: 'Caption'},
+            {name: 'imageUrl', type: 'url', title: 'Image URL'},
+          ],
+        },
+      ],
     },
   ],
 }

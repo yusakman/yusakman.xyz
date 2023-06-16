@@ -5,29 +5,29 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
-const Post = ({ post }) => {
+const Project = ({ project }) => {
   return (
     <div className={styles.page}>
       <Header />
-      <Article {...post} />
+      <Article {...project} />
       <Footer />
     </div>
   );
 };
 
-export default Post;
+export default Project;
 
 export async function getStaticPaths() {
-  const query = `*[_type == "post"] {
+  const query = `*[_type == "project"] {
         slug {
             current
         }
     }`;
 
-  const posts = await client.fetch(query);
-  const paths = posts.map((post) => ({
+  const projects = await client.fetch(query);
+  const paths = projects.map((project) => ({
     params: {
-      slug: post.slug.current,
+      slug: project.slug.current,
     },
   }));
 
@@ -38,13 +38,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const query = `*[_type == "post" && slug.current == '${slug}'][0]`;
+  const query = `*[_type == "project" && slug.current == '${slug}'][0]`;
 
-  const post = await client.fetch(query);
+  const project = await client.fetch(query);
 
   return {
     props: {
-      post,
+      project,
     },
   };
 }

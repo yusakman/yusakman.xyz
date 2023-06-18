@@ -1,3 +1,11 @@
+.dark {
+  background: linear-gradient(245.2deg, #1e2935 3.43%, #141414 99.51%);
+}
+
+.light {
+  background: linear-gradient(245.2deg, #d8dadc 3.43%, #f3f3f3 99.51%);
+}
+
 .header {
   position: fixed;
   display: flex;
@@ -6,14 +14,14 @@
   width: 100%;
   z-index: 10;
   font-size: 18px;
-  background: linear-gradient(245.2deg, #1e2935 3.43%, #141414 99.51%);
   padding: 20px;
 
-  .headerLeft {
+  .header-left {
     display: flex;
     flex-direction: column;
+    padding-right: 25%;
 
-    .headerIcon {
+    .header-icon {
       display: flex;
 
       p {
@@ -24,14 +32,24 @@
       }
     }
 
-    .headerNav {
+    .header-nav {
       display: flex;
       align-items: center;
+      justify-content: space-around;
+
+      .header-link {
+        display: flex;
+        align-items: center;
+      }
 
       p {
         margin: 10px;
       }
     }
+  }
+
+  .header-right {
+    cursor: pointer;
   }
 }
 
@@ -39,28 +57,29 @@
   .header {
     position: fixed;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 10;
     width: 100%;
     height: 80px;
     font-size: 16px;
-    // top: -3%;
     top: 0;
     margin: 0;
 
-    .headerLeft {
-      .headerIcon {
-        display: none;
+    .header-left {
+      padding-right: 0;
+
+      .header-icon {
+        // display: none;
       }
 
-      .headerNav {
+      .header-nav {
         position: relative;
         top: 5px;
         left: 10px;
       }
     }
 
-    .headerRight {
+    .header-right {
       padding: 15px;
     }
   }
@@ -80,7 +99,6 @@
 
 @media only screen and (max-width: 300px) {
   .header {
-    // top: -5%;
     font-size: 10px;
   }
 }

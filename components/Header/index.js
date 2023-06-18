@@ -9,6 +9,17 @@ import { useEffect } from "react";
 import { useState } from "react";
 import themeColor from "@/styles/Theme.module.scss";
 
+const nav = [
+  {
+    name: "Porto",
+    url: "/#Porto",
+  },
+  {
+    name: "Blog",
+    url: "/#Blog",
+  },
+];
+
 const Header = () => {
   const theme = useStore((state) => state.theme);
   const setTheme = useStore((state) => state.setTheme);
@@ -26,25 +37,29 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.header}>
-      <div className={styles.headerLeft}>
-        <div className={styles.headerIcon}>
+    <div className={`${styles[`header`]} ${styles[theme]}`}>
+      <div className={styles[`header-left`]}>
+        <Link href={`/`} className={styles[`header-icon`]}>
           <Image src={headerIcon} alt="header-icon" />
           <p>Yusakman.xyz</p>
-        </div>
-        <div className={styles.headerNav}>
-          <p>About</p>
-          <p>Projects</p>
-          <p>Blog</p>
-          <p>
+        </Link>
+
+        <div className={styles[`header-nav`]}>
+          {nav.map((nav) => (
+            <Link href={nav.url} className={styles[`header-link`]}>
+              {nav.name}
+            </Link>
+          ))}
+          <Link href={`https://github.com/yusakman`} target="_blank">
             Github{" "}
             <span>
               <BsFillArrowUpRightSquareFill />
             </span>
-          </p>
+          </Link>
         </div>
       </div>
-      <div className={styles.headerRight} onClick={() => handleTheme()}>
+
+      <div className={styles[`header-right`]} onClick={() => handleTheme()}>
         <Image src={switchThemeIcon} alt="switch-icon" />
       </div>
     </div>

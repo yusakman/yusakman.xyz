@@ -9,13 +9,14 @@
   }
 
   .more {
-    display: flex;
+    display: none;
+    // display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px 0;
     font-size: 150%;
 
-    .moreIcon {
+    .more-icon {
       margin-right: 10px;
     }
 

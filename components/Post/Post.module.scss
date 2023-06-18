@@ -54,6 +54,11 @@
           font-weight: 500;
           margin-top: 30px;
         }
+
+        .desc {
+          line-height: 1.1;
+          letter-spacing: 0.02rem;
+        }
       }
     }
   }
@@ -78,7 +83,7 @@
           width: 90%;
 
           .desc {
-            text-align: justify;
+            // text-align: justify;
             font-size: 90%;
           }
         }
@@ -150,13 +155,6 @@
         .imgContainer {
           width: 80%;
           height: 150px;
-        }
-        .textContainer {
-          .postTitle,
-          .dates,
-          .desc {
-            text-align: center;
-          }
         }
       }
     }

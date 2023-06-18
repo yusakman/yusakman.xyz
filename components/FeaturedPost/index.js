@@ -9,7 +9,7 @@ const FeaturedPost = ({ children }) => {
       <h1 className={styles.title}>Featured Posts</h1>
       {children}
       <div className={styles.more}>
-        <IconContext.Provider value={{ className: styles.moreIcon }}>
+        <IconContext.Provider value={{ className: styles[`more-icon`] }}>
           <GiSecretBook />
         </IconContext.Provider>
         <p>More Posts...</p>

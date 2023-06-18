@@ -67,7 +67,6 @@ const myPortableTextComponents = {
 };
 
 const Article = ({ image, title, description, body }) => {
-  console.log("body", body);
   return (
     <div className={styles.article}>
       <p className={styles.title}>{title}</p>

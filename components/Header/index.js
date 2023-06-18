@@ -7,12 +7,11 @@ import Link from "next/link";
 import useStore from "@/store/store";
 import { useEffect } from "react";
 import { useState } from "react";
-import themeColor from "@/styles/Theme.module.scss";
 
 const nav = [
   {
     name: "Porto",
-    url: "/#Porto",
+    url: "/#porto",
   },
   {
     name: "Blog",
@@ -26,12 +25,10 @@ const Header = () => {
 
   const handleTheme = () => {
     if (theme === `dark`) {
-      console.log(`set theme to light`);
       setTheme(`light`);
     }
 
     if (theme === `light`) {
-      console.log(`set theme to dark`);
       setTheme(`dark`);
     }
   };
@@ -45,8 +42,8 @@ const Header = () => {
         </Link>
 
         <div className={styles[`header-nav`]}>
-          {nav.map((nav) => (
-            <Link href={nav.url} className={styles[`header-link`]}>
+          {nav.map((nav, index) => (
+            <Link href={nav.url} className={styles[`header-link`]} key={index}>
               {nav.name}
             </Link>
           ))}

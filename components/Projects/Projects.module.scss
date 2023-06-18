@@ -8,11 +8,6 @@
     align-items: center;
     margin: 30px 0;
 
-    a {
-      list-style: none;
-      color: inherit;
-    }
-
     .top {
       position: relative;
       margin: 15px 0;
@@ -47,7 +42,12 @@
         }
 
         .iconUrl {
+          font-size: 25px;
           margin: 0 5px;
+        }
+
+        .iconUrl:hover {
+          color: #e47bf6;
         }
       }
 

@@ -1,11 +1,25 @@
 .dark {
   background: linear-gradient(245.2deg, #1e2935 3.43%, #141414 99.51%);
-
   color: #e6e6e6;
+
+  a {
+    color: #f6f6f6;
+  }
+
+  a:hover {
+    color: #c7c7c7;
+  }
 }
 
 .light {
   background: linear-gradient(245.2deg, #d8dadc 3.43%, #f3f3f3 99.51%);
-
   color: #000000;
+
+  a {
+    color: #0b0b0b;
+  }
+
+  a:hover {
+    color: #717171;
+  }
 }

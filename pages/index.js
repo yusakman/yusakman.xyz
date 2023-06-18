@@ -52,9 +52,6 @@ export async function getServerSideProps() {
   const { posts, totalPost } = await loadPost(1, LOAD_MORE_STEP);
   const { projects, totalProject } = await loadProject(0, 2);
 
-  console.log("di serveside prop PROJECT..", projects);
-  console.log("di serveside prop totalProject...", projects);
-
   return {
     props: {
       initialPost: posts,

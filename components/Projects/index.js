@@ -6,6 +6,9 @@ import iconGit from "../../assets/GithubLogo.svg";
 import Link from "next/link";
 import { IS_DEV } from "@/const";
 import { urlFor } from "@/lib/client";
+import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
+import {TbWorld} from "react-icons/tb"
+import { IconContext } from "react-icons";
 
 const Projects = ({ image, title, description, slug, webUrl, githubUrl }) => {
   return (
@@ -32,11 +35,21 @@ const Projects = ({ image, title, description, slug, webUrl, githubUrl }) => {
             <Link href={`/project/${encodeURI(slug.current)}`}>
               <p>{title}</p>
             </Link>
-            <Link href={webUrl} target="_blank" className={styles.iconUrl}>
+            {/* <Link href={webUrl} target="_blank" className={styles.iconUrl}>
               <Image src={iconGlobe} alt="icon-globe" />
+            </Link> */}
+            <Link href={webUrl} target="_blank">
+              <IconContext.Provider value={{ className: styles.iconUrl }}>
+                <TbWorld />
+              </IconContext.Provider>
             </Link>
-            <Link href={githubUrl} target="_blank" className={styles.iconUrl}>
+            {/* <Link href={githubUrl} target="_blank" className={styles.iconUrl}>
               <Image src={iconGit} alt="icon-git" />
+            </Link> */}
+            <Link href={githubUrl} target="_blank">
+              <IconContext.Provider value={{ className: styles.iconUrl }}>
+                <AiFillGithub />
+              </IconContext.Provider>
             </Link>
           </div>
           <div className={styles[`project-desc`]}>

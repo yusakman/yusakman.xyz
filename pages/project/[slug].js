@@ -3,13 +3,13 @@ import { client, urlFor } from "@/lib/client";
 import styles from "@/styles/Page.module.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Article from "@/components/Article";
+import ProjectDetail from "@/components/ProjectDetail";
 
 const Project = ({ project }) => {
   return (
     <div className={styles.page}>
       <Header />
-      <Article {...project} />
+      <ProjectDetail {...project} />
       <Footer />
     </div>
   );

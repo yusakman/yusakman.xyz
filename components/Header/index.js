@@ -15,7 +15,7 @@ const nav = [
   },
   {
     name: "Blog",
-    url: "/#Blog",
+    url: "/#blog",
   },
 ];
 

@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 
 const FeaturedPost = ({ children }) => {
   return (
-    <div className={styles.featuredPost}>
+    <div className={styles.featuredPost} id="blog">
       <h1 className={styles.title}>Featured Posts</h1>
       {children}
       <div className={styles.more}>

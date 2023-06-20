@@ -23,6 +23,8 @@ export default function Home({
   const [posts, setPosts] = useState(initialPost);
   const [projects, setProjects] = useState(initialProject);
 
+  console.log(`posts isinya`, posts)
+
   return (
     <div className={styles.page}>
       <Head>

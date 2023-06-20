@@ -4,6 +4,9 @@ import { sanityConfig } from "@/lib/client";
 import { urlFor } from "@/lib/client";
 import Image from "next/image";
 import styles from "./Article.module.scss";
+import Refractor from "react-refractor";
+import js from "refractor/lang/javascript";
+import sol from "refractor/lang/solidity";
 
 const SanityImage = ({ asset, caption, imageUrl }) => {
   const nextProps = useNextSanityImage(sanityConfig, asset);
@@ -45,10 +48,24 @@ const SanityImage = ({ asset, caption, imageUrl }) => {
   }
 };
 
+const CodeHighlight = ({ language, code, highlightedLines }) => {
+  Refractor.registerLanguage(js);
+  Refractor.registerLanguage(sol);
+
+  return (
+    <div>
+      <Refractor language={language} value={code} markers={highlightedLines} />
+    </div>
+  );
+};
+
 const myPortableTextComponents = {
   types: {
     image: ({ value }) => {
       return <SanityImage {...value} />;
+    },
+    code: ({ value }) => {
+      return <CodeHighlight {...value} />;
     },
   },
 

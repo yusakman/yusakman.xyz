@@ -1,3 +1,5 @@
+import {defineType, defineField} from 'sanity'
+
 // schemas/pet.js
 export default {
   name: 'post',
@@ -89,6 +91,19 @@ export default {
             {name: 'caption', type: 'string', title: 'Caption'},
             {name: 'imageUrl', type: 'url', title: 'Image URL'},
           ],
+        },
+        {
+          type: 'code',
+          options: {
+            theme: 'solarized_dark',
+            language: 'js',
+            languageAlternatives: [
+              {title: 'Javascript', value: 'js'},
+              {title: 'HTML', value: 'html'},
+              {title: 'CSS', value: 'css'},
+              {title: 'Solidity', value: 'solidity'},
+            ],
+          },
         },
       ],
     },

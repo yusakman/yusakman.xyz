@@ -103,6 +103,7 @@ export default {
               {title: 'CSS', value: 'css'},
               {title: 'Solidity', value: 'solidity'},
             ],
+            withFilename: true
           },
         },
       ],

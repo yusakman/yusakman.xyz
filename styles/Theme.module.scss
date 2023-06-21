@@ -9,6 +9,11 @@
   a:hover {
     color: #c7c7c7;
   }
+
+  pre {
+    background: linear-gradient(274.82deg, #000000 10.92%, #2C192D 90.29%);
+
+  }
 }
 
 .light {
@@ -20,6 +25,11 @@
   }
 
   a:hover {
-    color: #717171;
+    color: #adadad;
+  }
+
+  pre {
+    background: linear-gradient(274.82deg, #000000 10.92%, #250000 90.29%);
+
   }
 }

@@ -1,0 +1,33 @@
+.light {
+  color: rgb(246, 246, 246);
+}
+
+.code-highlight {
+  .pre-highlight {
+    position: relative;
+    border-radius: 15px;
+    padding: 50px;
+    overflow: hidden;
+
+    .icon-url {
+      position: absolute;
+      left: 10px;
+      top: 1.5px;
+      margin-top: 20px;
+      margin-left: 15px;
+    }
+
+    .icon-url:hover {
+      cursor: pointer;
+      color: #e47bf6;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .code-highlight {
+    .pre-highlight {
+      overflow: scroll;
+    }
+  }
+}

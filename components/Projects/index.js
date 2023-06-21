@@ -23,10 +23,11 @@ const Projects = ({ image, title, description, slug, webUrl, githubUrl }) => {
               src={IS_DEV ? img : urlFor(image).url()}
               alt={image.caption}
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{
                 objectFit: "cover",
               }}
+              priority={true}
             />
           </div>
         </Link>

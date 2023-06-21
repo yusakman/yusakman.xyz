@@ -19,10 +19,11 @@ const Post = ({ image, title, description, slug, publishedDate }) => {
               src={IS_DEV ? samplePost1 : urlFor(image).url()}
               alt={image.caption}
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{
                 objectFit: "cover",
               }}
+              priority={true}
             />
           </div>
           <div className={styles.textContainer}>

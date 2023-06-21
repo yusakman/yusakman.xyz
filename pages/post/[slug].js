@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
 const Post = ({ post }) => {
-  console.log(`di post page`, post)
   return (
     <div className={styles.page}>
       <Header />

@@ -36,7 +36,7 @@ const SanityImage = ({ asset, caption, imageUrl }) => {
           {...imageProps}
           alt={caption}
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
             objectFit: "cover",
           }}
@@ -58,7 +58,7 @@ const myPortableTextComponents = {
 
   marks: {
     link: ({ children, value }) => {
-      const rel = !value.href.startsWith("/")
+      const rel = !value.href?.startsWith("/")
         ? "noreferrer noopener"
         : undefined;
       return (

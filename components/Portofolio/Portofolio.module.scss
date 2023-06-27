@@ -6,6 +6,10 @@
     font-size: 35px;
     text-align: center;
     margin: 20px;
+
+    @media only screen and (max-width: 612px) {
+      margin: 0px;
+    }
   }
 
   .more {

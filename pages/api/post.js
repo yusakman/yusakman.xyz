@@ -49,7 +49,7 @@ export async function loadProject(start, end) {
   } else {
     console.log("fetching data PROJECT...");
     const query = `{
-      "projects": *[_type == "project"] | order(publishedDate desc) [${start}...${end}] 
+      "projects": *[_type == "project"] | order(publishedDate asc) [${start}...${end}] 
       {_id, publishedDate, title, slug, description, image, webUrl, githubUrl},
       "totalProject": count(*[_type == "project"])
      }`;

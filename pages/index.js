@@ -50,7 +50,7 @@ export default function Home({
 
 export async function getServerSideProps() {
   const { posts, totalPost } = await loadPost(1, LOAD_MORE_STEP);
-  const { projects, totalProject } = await loadProject(0, 2);
+  const { projects, totalProject } = await loadProject(0, 3);
 
   return {
     props: {

@@ -63,12 +63,13 @@
     }
 
     .img-horizontal {
+      position: relative;
       width: 600px;
       height: 400px;
     }
 
     .img-vertical {
-      position: relative;
+      // position: relative;
       width: 300px;
       height: 500px;
     }

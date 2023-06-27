@@ -5,9 +5,6 @@ import { Tooltip } from "@mui/material";
 import Link from "next/link";
 
 const Hero = () => {
-  const handleClick = () => {
-    console.log(`Handle Click`);
-  };
   return (
     <div className={styles[`hero`]}>
       <div className={styles[`hero-text`]}>
@@ -41,7 +38,6 @@ const Hero = () => {
       <Link
         href={`/#porto`}
         scroll={false}
-        onClick={handleClick}
         className={styles[`hero-button-mobile`]}
       >
         <p>See My Porto</p>

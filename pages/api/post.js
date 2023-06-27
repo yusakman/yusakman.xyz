@@ -12,14 +12,11 @@ export async function loadPost(start, end) {
     const posts = data;
     const totalPost = 2;
 
-    console.log("calling loadData");
-
     return {
       posts,
       totalPost,
     };
   } else {
-    console.log("fetching data POST...");
     const query = `{
       "posts": *[_type == "post"] | order(publishedDate desc) [${start}...${end}] 
       {_id, publishedDate, title, slug, description, image},
@@ -40,14 +37,11 @@ export async function loadProject(start, end) {
     const projects = dataProject;
     const totalProject = 2;
 
-    console.log("calling loadProject");
-
     return {
       projects,
       totalProject,
     };
   } else {
-    console.log("fetching data PROJECT...");
     const query = `{
       "projects": *[_type == "project"] | order(publishedDate asc) [${start}...${end}] 
       {_id, publishedDate, title, slug, description, image, webUrl, githubUrl},
@@ -55,9 +49,6 @@ export async function loadProject(start, end) {
      }`;
 
     const { projects, totalProject } = await client.fetch(query);
-
-    console.log("projects di query", projects);
-    console.log("totalProject", totalProject);
 
     return {
       projects,

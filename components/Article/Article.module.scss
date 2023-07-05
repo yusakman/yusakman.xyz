@@ -36,7 +36,6 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    line-height: 1.1;
     letter-spacing: 0.02rem;
 
     h1,
@@ -52,6 +51,10 @@
 
     h1 {
       font-size: 110%;
+    }
+
+    p {
+      line-height: 28px;
     }
 
     blockquote {
@@ -75,7 +78,6 @@
     }
 
     .code-highlight {
-
       .pre-highlight {
         position: relative;
         border-radius: 15px;
@@ -92,11 +94,10 @@
 
         .icon-url:hover {
           cursor: pointer;
-          color: #E47BF6
+          color: #e47bf6;
         }
       }
     }
-    
   }
 }
 

@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 const Portofolio = ({ children }) => {
   return (
     <div className={styles.portofolio} id="porto">
-      <h1 className={styles.title}>Portofolio</h1>
+      <h1 className={styles.title}>Portfolio</h1>
       {children}
       <div className={styles.more}>
         <IconContext.Provider value={{ className: styles.moreIcon }}>

@@ -43,7 +43,12 @@ const Header = () => {
 
         <div className={styles[`header-nav`]}>
           {nav.map((nav, index) => (
-            <Link href={nav.url} className={styles[`header-link`]} key={index}>
+            <Link
+              href={nav.url}
+              className={styles[`header-link`]}
+              key={index}
+              scroll={false}
+            >
               {nav.name}
             </Link>
           ))}

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 50px;
 
   .title {
     font-size: 150%;
@@ -121,7 +121,7 @@
 
 @media only screen and (max-width: 750px) {
   .article {
-    margin-top: 200px;
+    margin-top: 100px;
 
     .description {
       width: 100%;
@@ -151,7 +151,6 @@
 @media only screen and (max-width: 612px) {
   .article {
     width: 95%;
-    margin-top: 150px;
 
     .image-container {
       height: 200px;

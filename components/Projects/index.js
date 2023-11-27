@@ -28,6 +28,7 @@ const Projects = ({ image, title, description, slug, webUrl, githubUrl }) => {
                 objectFit: "cover",
               }}
               priority={true}
+              quality={90}
             />
           </div>
         </Link>

@@ -1,5 +1,5 @@
 import heroIcon from "@/assets/hero.svg";
-import heroBanner from "@/assets/CurrencyEth.png"
+import heroBanner from "@/assets/CurrencyEth.png";
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import { Tooltip } from "@mui/material";
@@ -12,8 +12,7 @@ const Hero = () => {
         <p className={styles[`hero-title`]}>Hi, I'm Yusakman!</p>
         <p>Welcome to my library. </p>
         <p>
-          I'm a <strong>blockchain</strong> and{" "}
-          <strong>front-end developer.</strong>
+          I'm a <strong>Full Stack Blockchain Developer.</strong>
         </p>
         <Link href={`/#porto`} scroll={false}>
           <button className={styles[`hero-button`]}>See My Porto</button>

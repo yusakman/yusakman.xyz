@@ -11,13 +11,13 @@
   }
 
   pre {
-    background: linear-gradient(274.82deg, #000000 10.92%, #2C192D 90.29%);
-
+    background: linear-gradient(274.82deg, #000000 10.92%, #2c192d 90.29%);
   }
 }
 
 .light {
-  background: linear-gradient(245.2deg, #d8dadc 3.43%, #f3f3f3 99.51%);
+  // background: linear-gradient(245.2deg, #d8dadc 3.43%, #f3f3f3 99.51%);
+  background: #c9cad0;
   color: #000000;
 
   a {
@@ -25,11 +25,10 @@
   }
 
   a:hover {
-    color: #adadad;
+    color: #ffffff;
   }
 
   pre {
     background: linear-gradient(274.82deg, #000000 10.92%, #250000 90.29%);
-
   }
 }

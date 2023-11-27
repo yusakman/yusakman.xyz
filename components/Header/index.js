@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <div className={`${styles[`header`]}`}>
+    <div className={`${styles[`header`]} ${styles[theme]}`}>
       <div className={styles[`header-left`]}>
         <Link href={`/`} className={styles[`header-icon`]}>
           <Image src={headerIcon} alt="header-icon" />

@@ -1,9 +1,13 @@
 .dark {
-  background: linear-gradient(245.2deg, #1e2935 3.43%, #141414 99.51%);
+  @media (max-width: 767.98px) {
+    background: #1e2935;
+  }
 }
 
 .light {
-  background: linear-gradient(245.2deg, #d8dadc 3.43%, #f3f3f3 99.51%);
+  @media (max-width: 767.98px) {
+    background: #c9cad0;
+  }
 }
 
 .header {
@@ -15,13 +19,30 @@
   font-size: 18px;
   padding: 20px;
 
+  @media (max-width: 991.98px) {
+  }
+
+  @media (max-width: 767.98px) {
+    position: fixed;
+    justify-content: space-around;
+  }
+
   .header-left {
     display: flex;
     flex-direction: column;
     padding-right: 25%;
 
+    @media (max-width: 767.98px) {
+      padding-right: 0;
+    }
+
     .header-icon {
       display: flex;
+      margin-bottom: 20px;
+
+      @media (max-width: 767.98px) {
+        display: none;
+      }
 
       p {
         display: flex;
@@ -35,6 +56,12 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+
+      @media (max-width: 767.98px) {
+        a {
+          padding: 5px;
+        }
+      }
 
       .header-link {
         display: flex;
@@ -52,51 +79,51 @@
   }
 }
 
-@media only screen and (max-width: 612px) {
-  .header {
-    align-items: center;
-    justify-content: space-around;
-    z-index: 10;
-    width: 100%;
-    height: 80px;
-    font-size: 16px;
-    top: 0;
-    margin: 0;
+// @media only screen and (max-width: 612px) {
+//   .header {
+//     align-items: center;
+//     justify-content: space-around;
+//     z-index: 10;
+//     width: 100%;
+//     height: 80px;
+//     font-size: 16px;
+//     top: 0;
+//     margin: 0;
 
-    .header-left {
-      padding-right: 0;
+//     .header-left {
+//       padding-right: 0;
 
-      .header-icon {
-        // display: none;
-      }
+//       .header-icon {
+//         // display: none;
+//       }
 
-      .header-nav {
-        position: relative;
-        top: 5px;
-        left: 10px;
-      }
-    }
+//       .header-nav {
+//         position: relative;
+//         top: 5px;
+//         left: 10px;
+//       }
+//     }
 
-    .header-right {
-      padding: 15px;
-    }
-  }
-}
+//     .header-right {
+//       padding: 15px;
+//     }
+//   }
+// }
 
-@media only screen and (max-width: 500px) {
-  .header {
-    font-size: 15px;
-  }
-}
+// @media only screen and (max-width: 500px) {
+//   .header {
+//     font-size: 15px;
+//   }
+// }
 
-@media only screen and (max-width: 400px) {
-  .header {
-    font-size: 14px;
-  }
-}
+// @media only screen and (max-width: 400px) {
+//   .header {
+//     font-size: 14px;
+//   }
+// }
 
-@media only screen and (max-width: 300px) {
-  .header {
-    font-size: 10px;
-  }
-}
+// @media only screen and (max-width: 300px) {
+//   .header {
+//     font-size: 10px;
+//   }
+// }

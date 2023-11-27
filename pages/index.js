@@ -24,27 +24,29 @@ export default function Home({
   const [projects, setProjects] = useState(initialProject);
 
   return (
-    <div className={styles.page}>
+    <>
       <Head>
         <title>Yusakman</title>
         <meta name="description" content="My personal blog" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Hero />
-      <FeaturedPost>
-        {posts.map((post) => (
-          <Post key={post._id} {...post}></Post>
-        ))}
-      </FeaturedPost>
-      <Portofolio>
-        {projects.map((project) => (
-          <Projects key={project._id} {...project}></Projects>
-        ))}
-      </Portofolio>
-      <Footer />
-    </div>
+      <div className={styles.page}>
+        <Header />
+        <Hero />
+        <FeaturedPost>
+          {posts.map((post) => (
+            <Post key={post._id} {...post}></Post>
+          ))}
+        </FeaturedPost>
+        <Portofolio>
+          {projects.map((project) => (
+            <Projects key={project._id} {...project}></Projects>
+          ))}
+        </Portofolio>
+        <Footer />
+      </div>
+    </>
   );
 }
 

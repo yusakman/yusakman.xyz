@@ -1,4 +1,5 @@
 import heroIcon from "@/assets/hero.svg";
+import heroBanner from "@/assets/CurrencyEth.png"
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import { Tooltip } from "@mui/material";
